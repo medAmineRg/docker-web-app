@@ -1,4 +1,5 @@
-node {
+pipeline {
+    node("windows"){
 
     checkout scm
 
@@ -9,4 +10,5 @@ node {
         /* Push the container to the custom Registry */
         customImage.push()
     }
+   
 }
